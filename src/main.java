@@ -14,9 +14,6 @@ public class main {
 
 
 
-        new PhoneOrder(customer, tid);
-        
-
 
     }
 }

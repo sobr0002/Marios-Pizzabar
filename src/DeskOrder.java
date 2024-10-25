@@ -6,10 +6,11 @@ public class DeskOrder extends OrderType{
     private String customer;
     private LocalTime timeToFinish;
 
-    //Constructor
-    public DeskOrder(String customer, LocalTime timeToFinish){
+    // Constructor with timeToFinish parameter
+    public DeskOrder(String customer, LocalTime timeToFinish, int orderID) {
+        super(orderID);
         this.customer = customer;
-        this.timeToFinish = LocalTime.now().plusMinutes(15);
+        this.timeToFinish = (timeToFinish != null) ? timeToFinish : LocalTime.now().plusMinutes(15);
     }
 
     //getter og setter for customer

@@ -7,17 +7,15 @@ public class PhoneOrder extends OrderType {
     private String customer;
 
 
-    //Constructor
-    public PhoneOrder(String customer, String pickupTime){
-
-        Scanner sc = new Scanner(System.in);
-        System.out.println("hvornår skal pizzaen hentes?");
-        LocalTime.parse(pickupTime);
-
+    // Constructor
+    public PhoneOrder(String customer, String pickupTime, int orderID) {
+        super(orderID); // Call the constructor of the superclass (OrderType)
+        this.pickupTime = LocalTime.parse(pickupTime);
         this.customer = customer;
 
-        System.out.println(customer + pickupTime);
+        System.out.println(customer + " " + this.pickupTime); // Prints customer and pickup time
     }
+
 
 
     //GETTER og SETTER
