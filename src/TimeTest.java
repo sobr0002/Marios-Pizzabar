@@ -20,7 +20,7 @@ public class TimeTest {
     void testGetTime() {
         //Tester getter-metode for time
         time.getTime();
-
+//HEJ
     }
 
 
