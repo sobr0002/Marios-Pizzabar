@@ -28,4 +28,6 @@ public class DeskOrder extends OrderType{
     public void setTimeToFinish(LocalTime timeToFinish) {
         this.timeToFinish = timeToFinish;
     }
+
+
 }

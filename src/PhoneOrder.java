@@ -26,4 +26,6 @@ public class PhoneOrder extends OrderType {
     public void setPickupTime(LocalTime pickupTime) {
         this.pickupTime = pickupTime;
     }
+
+
 }
