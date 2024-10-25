@@ -15,6 +15,8 @@ public class PhoneOrder extends OrderType {
         LocalTime.parse(pickupTime);
 
         this.customer = customer;
+
+        System.out.println(customer + pickupTime);
     }
 
 
