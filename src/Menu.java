@@ -6,8 +6,6 @@ public class Menu {
 
     public Menu(){
 
-
-
         //Constructor
         public Menu(){
             menuItems = new ArrayList<>();
