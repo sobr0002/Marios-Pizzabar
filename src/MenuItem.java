@@ -35,5 +35,5 @@ public class MenuItem {
     public void setName(String name) {
         this.name = name;
     }
-String and = "Hej";
+
 }
