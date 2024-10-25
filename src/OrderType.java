@@ -26,6 +26,8 @@ public OrderType(int ID) {
       return "Order Time: " + orderTime.toString() + ", ID: " + ID;
    }
 
+   public static void main(String[] args) {
 
+   }
 }
 
