@@ -1,3 +1,5 @@
+
+
 import java.util.ArrayList;
 
 public class Menu {
@@ -5,13 +7,8 @@ public class Menu {
     private ArrayList<MenuItem> menuItems;
 
     public Menu(){
+        menuItems = new ArrayList<>();
 
-
-
-        //Constructor
-        public Menu(){
-            menuItems = new ArrayList<>();
-        }
 
         //Metode der tilføjer et menuItem til listen
         public void addMenuItem(MenuItem item){
