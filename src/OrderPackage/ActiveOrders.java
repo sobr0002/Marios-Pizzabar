@@ -1,5 +1,8 @@
 package OrderPackage;
 
+import MenuPackage.MenuItem;
+import org.junit.jupiter.api.Order;
+
 import java.util.ArrayList;
 
 public class ActiveOrders {
@@ -18,6 +21,14 @@ public class ActiveOrders {
         } else{
             System.out.println("Ordren findes ikke"); //error message
         }
+    }
+
+    public static void orderUpdateRemove(MenuItem item){
+        OrderType.removeItem(item);
+    }
+
+    public static void orderUpdateAdd(MenuItem item){
+        OrderType.addItem(item);
     }
 
 
