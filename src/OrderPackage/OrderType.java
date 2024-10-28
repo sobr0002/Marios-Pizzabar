@@ -1,7 +1,6 @@
 package OrderPackage;
 
 import MenuPackage.MenuItem;
-
 import java.time.LocalTime;
 import java.util.ArrayList;
 
@@ -34,7 +33,7 @@ public class OrderType {
     }
     //GETTER-METODE FOR AT INDHENTE BESTILLINGSTIDSPUNKT
     public LocalTime getorderTime() {
-        return time.getTime(); //kalder metoden fra Time-klassen til at angive det aktuelle tidspunkt
+        return time.getTime(); //kalder metoden fra OrderPackage.Time-klassen til at angive det aktuelle tidspunkt
 
     } //GETTER-METODE FOR AT INDHENTE ID
 
@@ -45,7 +44,7 @@ public class OrderType {
 
     @Override
     public String toString() {
-        return "Order Time: " + time.getTime() + ", ID nr: " + ID;
+        return "Order OrderPackage.Time: " + time.getTime() + ", ID nr: " + ID;
     }
 
 
