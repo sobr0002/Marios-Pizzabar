@@ -2,7 +2,7 @@ import java.time.LocalTime;
 
 public class Time {
 
-    private LocalTime time;
+    public LocalTime time;
 
     //Konstruktør for time-objektet, som automatisk sætter det aktuelle tidspunkt
     public Time() {

@@ -1,5 +1,6 @@
+package OrderPackage;
+
 import java.time.LocalTime;
-import java.util.Scanner;
 
 public class PhoneOrder extends OrderType {
 
@@ -9,7 +10,7 @@ public class PhoneOrder extends OrderType {
 
     // Constructor
     public PhoneOrder(String customer, String pickupTime) {
-        super(); // Kalder  constructor af superclass (OrderType)
+        super(); // Kalder  constructor af superclass (OrderPackage.OrderType)
         this.pickupTime = LocalTime.parse(pickupTime); //Parse omdanner ml. datatyper, så String bliver til time
         this.customer = customer;
 
