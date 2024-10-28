@@ -4,7 +4,7 @@ public class Time {
 
     private LocalTime time;
 
-    //Konstruktør for time-objektet, som automatisk sætter det aktuelle tidspunkt.
+    //Konstruktør for time-objektet, som automatisk sætter det aktuelle tidspunkt
     public Time() {
         this.time = LocalTime.now(); //sætter automatisk tidspunktet ved ordreoprettelse
     }
