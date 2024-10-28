@@ -1,25 +1,23 @@
 package OrderPackage;
 
+import java.time.LocalTime;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Sort {
 
-
-    //GeeksForGeeks.com kaldte den kommende metode for bubble-sort metoden, men vi har lavet den i undervisningen også
-    public static void SorteringAfTid(ActiveOrders activeOrders){
-
-        //henter listen af bestillinger af ordrer fra ActiveOrder klassen
-        ArrayList<OrderType> activeOrderList = activeOrders.getActiveOrderlist();
-
-        int n = activeOrderList.size(); //størrelsen af listen defineres
-
-        //Kører igennem listen n-1 gange
-        for (int i = 0; i < n-1; i++){
-
+    // Metode der sorterer activeOrderList baseret på orderTime i OrderType(Spørgsmålet er så,
+    // om den faktisk kan se forskel på timeToFinish og PickUpTime)
+    public static void sortActiveOrders(ArrayList<OrderType> activeOrderList) {
+        for (int i = 0; i < activeOrderList.size() - 1; i++) { //Vi iterere gennem vores arrayListe, undtagen dem der allerede er sorteret
+            for (int j = 0; j < activeOrderList.size() - i - 1; j++) { //vi iterere igennem listen, og dem der ligger ved siden af hinanden bliver sammenlignet
+                if (activeOrderList.get(j).getOrderTime().isAfter(activeOrderList.get(j + 1).getOrderTime())) {
+                    // Bytter tiderne, hvis 'orderTime' er senere end den næste
+                    OrderType temp = activeOrderList.get(j); //midlertidig var til at holde på den værdi der skal sammenlignes
+                    activeOrderList.set(j, activeOrderList.get(j + 1)); //her bytter vi så rundt på dem
+                    activeOrderList.set(j + 1, temp); //her er de placeret
+                }
+            }
         }
-
-
-
     }
 }

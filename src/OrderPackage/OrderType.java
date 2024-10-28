@@ -7,7 +7,7 @@ import java.util.ArrayList;
 public class OrderType {
 
     private int ID = 0;
-    private Time time = new Time(); //Instantierer time-objektet
+    private static Time time = new Time(); //Instantierer time-objektet
     private static ArrayList<MenuItem> order = new ArrayList<>();
 
 
@@ -32,7 +32,7 @@ public class OrderType {
 
     }
     //GETTER-METODE FOR AT INDHENTE BESTILLINGSTIDSPUNKT
-    public LocalTime getorderTime() {
+    public LocalTime getOrderTime() {
         return time.getTime(); //kalder metoden fra OrderPackage.Time-klassen til at angive det aktuelle tidspunkt
 
     } //GETTER-METODE FOR AT INDHENTE ID

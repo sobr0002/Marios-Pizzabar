@@ -17,8 +17,6 @@ public class PhoneOrder extends OrderType {
         System.out.println(customer + " " + this.pickupTime); // Printer
     }
 
-
-
     //GETTER og SETTER
     public String getCustomer() {
         return customer;
