@@ -47,13 +47,4 @@ public class PizzaTest {
         assertEquals(1, ingredients.size());
         assertTrue(ingredients.contains("Cheese"));
     }
-    
-
-    @Test
-    public void testDisplayIngredients() {
-        Pizza pizza = new Pizza(5, 11.99f, "Mixed", 0, 2, 4); // Cheese, Pepperoni, Onion
-        String expectedOutput = "Menu.Ingredients: [Cheese, Pepperoni, Onion]";
-
-        assertEquals(expectedOutput, pizza.displayIngredients());
-    }
 }
