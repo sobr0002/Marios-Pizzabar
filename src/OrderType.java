@@ -18,7 +18,7 @@ public OrderType(int ID) {
 } //UDSKRIVE ORDER TIME OG ID VIA TOSTRING
    @Override
    public String toString() {
-      return "Order Time: " + orderTime.toString() + ", ID: " + ID;
+      return "Order Time: " + orderTime.toString() + ", ID nr: " + ID;
    }
 
 
