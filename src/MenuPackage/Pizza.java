@@ -17,8 +17,8 @@ public class Pizza extends MenuItem{
         }
     }
 
-    public String displayIngredients(){
-        return "Menu.Ingredients: " + ingredients;
+    public void displayIngredients(){
+        System.out.println("Menu.Ingredients: " + ingredients);
     }
 
     public ArrayList<String> getIngredients(){
