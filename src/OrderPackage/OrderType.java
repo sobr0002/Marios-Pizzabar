@@ -8,7 +8,7 @@ public class OrderType {
 
     private int ID = 0;
     private Time time = new Time(); //Instantierer time-objektet
-    private ArrayList<MenuItem> order = new ArrayList<>();
+    private static ArrayList<MenuItem> order = new ArrayList<>();
 
 
     //CONSTRUCTOR
@@ -17,12 +17,12 @@ public class OrderType {
         time.orderTime();
     }
 
-    public void addItem(MenuItem item) { //Tilføjer varer til ArrayList "Order"
+    public static void addItem(MenuItem item) { //Tilføjer varer til ArrayList "Order"
         order.add(item);
 
     }
 
-    public void removeItem(MenuItem item) { //Sletter én vare fra aktuel ordre
+    public static void removeItem(MenuItem item) { //Sletter én vare fra aktuel ordre
 
         if (order.contains(item)) {
             order.remove(item);
