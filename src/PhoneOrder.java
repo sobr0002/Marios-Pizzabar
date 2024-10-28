@@ -8,12 +8,12 @@ public class PhoneOrder extends OrderType {
 
 
     // Constructor
-    public PhoneOrder(String customer, String pickupTime, int orderID) {
-        super(orderID); // Call the constructor of the superclass (OrderType)
-        this.pickupTime = LocalTime.parse(pickupTime);
+    public PhoneOrder(String customer, String pickupTime) {
+        super(); // Kalder  constructor af superclass (OrderType)
+        this.pickupTime = LocalTime.parse(pickupTime); //Parse omdanner ml. datatyper, så String bliver til time
         this.customer = customer;
 
-        System.out.println(customer + " " + this.pickupTime); // Prints customer and pickup time
+        System.out.println(customer + " " + this.pickupTime); // Printer
     }
 
 
