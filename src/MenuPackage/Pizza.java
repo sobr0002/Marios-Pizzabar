@@ -1,10 +1,9 @@
+package MenuPackage;
+
 import java.util.ArrayList;
 
 public class Pizza extends MenuItem{
 
-    private int itemNumber;
-    private float price;
-    private String name;
     private ArrayList<String> ingredients;
 
     public Pizza(int itemNumber, float price, String name, int... ingredientsIndex){
@@ -18,7 +17,11 @@ public class Pizza extends MenuItem{
         }
     }
 
-    public void displayIngredients(){
-        System.out.println("Ingredients: " + ingredients);
+    public String displayIngredients(){
+        return "Menu.Ingredients: " + ingredients;
+    }
+
+    public ArrayList<String> getIngredients(){
+        return ingredients;
     }
 }

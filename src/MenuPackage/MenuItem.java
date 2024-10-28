@@ -1,3 +1,5 @@
+package MenuPackage;
+
 public class MenuItem {
 
     private int itemNumber;
