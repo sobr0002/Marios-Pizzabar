@@ -6,7 +6,7 @@ import java.util.ArrayList;
 public class OrderType {
 
     private int ID = 0;
-    private Time time = new Time(); //Instantierer time-objektet
+    private Time time = new Time(); //Instantierer time-objektet.
     private ArrayList<MenuItem> order = new ArrayList<>();
 
 
