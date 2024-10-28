@@ -11,5 +11,13 @@ public class ActiveOrders {
         activeOrderList.add(order);
     }
 
+    //Metode der fjerner ordre fra arrayListen
+    public void removeOrder(OrderType order){
+        if (activeOrderList.contains(order)){ //Tjekker at arrayListe indeholder ordren
+            activeOrderList.remove(order); // fjerner ordreren
+        } else{
+            System.out.println("Ordren findes ikke"); //error message
+        }
+    }
 
 }
