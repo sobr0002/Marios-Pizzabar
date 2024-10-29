@@ -1,10 +1,12 @@
 package OrderPackage;
 
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class Time {
 
     public LocalTime time;
+    private DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm");
 
     //Konstruktør for time-objektet, som automatisk sætter det aktuelle tidspunkt
     public Time() {
@@ -23,7 +25,7 @@ public class Time {
 
     @Override
     public String toString() { //Udskriver bestillingstidspunkt til konsollen
-        return "Bestillingstidspunkt: " + time;
+        return "Bestillingstidspunkt: " + time.format(dtf);
     }
 }
 

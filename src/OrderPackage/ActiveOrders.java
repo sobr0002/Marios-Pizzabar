@@ -23,17 +23,7 @@ public class ActiveOrders {
         }
     }
 
-    //Metode der fjerner item fra ordre
-    public static void orderUpdateRemove(MenuItem item){
-        OrderType.removeItem(item);
-    }
-
-    //Metode der tilføjer item til ordre
-    public static void orderUpdateAdd(MenuItem item){
-        OrderType.addItem(item);
-    }
-
-    public void displayActiveOrders(){
+    public static void displayActiveOrders(){
         Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden
 
         System.out.println("De aktive ordrer er her: ");

@@ -3,7 +3,7 @@ package MenuPackage;
 import java.util.ArrayList;
 
 public class Menu {
-    private ArrayList<MenuItem> menuItems;
+    private static ArrayList<MenuItem> menuItems;
 
     public Menu(){
         menuItems = new ArrayList<>();
@@ -21,6 +21,7 @@ public class Menu {
         } else {
             for (MenuItem item : menuItems){
                 System.out.println(item.getItemNumber() + ". " + item.getName() + " " + item.getPrice() + "kr.");
+
             }
         }
     }

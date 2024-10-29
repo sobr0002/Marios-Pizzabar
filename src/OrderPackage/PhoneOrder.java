@@ -13,8 +13,13 @@ public class PhoneOrder extends OrderType {
         super(); // Kalder  constructor af superclass (OrderPackage.OrderType)
         this.pickupTime = LocalTime.parse(pickupTime); //Parse omdanner ml. datatyper, så String bliver til time
         this.customer = customer;
+        isPhoneOrder = true;
+        //System.out.println(customer + " " + this.pickupTime); // Printer
+    }
 
-        System.out.println(customer + " " + this.pickupTime); // Printer
+    @Override
+    public LocalTime finishTime(){
+        return pickupTime;
     }
 
     //GETTER og SETTER
