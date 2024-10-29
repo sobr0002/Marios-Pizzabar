@@ -17,12 +17,16 @@ public class Pizza extends MenuItem{
                 ingredients.add(Ingredients.ingredientsList[index]);
             }
         }
+        //Hver gang Pizza-klassen instantieres, tilføjes objektet til "menuItems" fra "Menu"-klassen
+        Menu.addMenuItem(this);
     }
 
+    @Override
     public void displayIngredients(){
-        System.out.println("Menu.Ingredients: " + ingredients);
+        System.out.print(ingredients);
     }
-
+    
+    
     public ArrayList<String> getIngredients(){
         return ingredients;
     }

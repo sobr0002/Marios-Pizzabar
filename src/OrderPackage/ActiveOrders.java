@@ -22,6 +22,12 @@ public class ActiveOrders {
             System.out.println("Ordren findes ikke"); //error message
         }
     }
+    
+    //Metode der fjerner ordre fra aktive liste og tilføjer til ordre history liste
+    public static void finishOrder(OrderType order){
+        removeOrder(order);
+        OrderHistory.addOrder(order);
+    }
 
     public static void displayActiveOrders(){
         Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden

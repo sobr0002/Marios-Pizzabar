@@ -24,6 +24,8 @@ public class ActiveOrdersTest {
         ActiveOrders.addOrder(order01); //Tilføjer testordren til "ActiveOrderList"
         PhoneOrder order02 = new PhoneOrder("Order02", "12:30");
         ActiveOrders.addOrder(order02);
+
+
         assertTrue(ActiveOrders.getActiveOrderList().contains(order01)); //Tester om indholdet er i ArrayListen "order01"
         assertTrue(ActiveOrders.getActiveOrderList().contains(order02)); //Tester om "order02" tilføjes rigtigt til ArrayListen
         assertEquals(2, ActiveOrders.getActiveOrderList().size()); //Tester om der er to aktive ordrer på ArrayListen
@@ -35,6 +37,8 @@ public class ActiveOrdersTest {
         ActiveOrders.addOrder(order01); //Tilføjer testordren til "ActiveOrderList"
         PhoneOrder order02 = new PhoneOrder("Order02", "12:30");
         ActiveOrders.addOrder(order02);
+
+
         ActiveOrders.removeOrder(order01);
         assertFalse(ActiveOrders.getActiveOrderList().contains(order01)); //Tester at ArrayListen ikke indeholder order01
         assertEquals(1, ActiveOrders.getActiveOrderList().size()); //Tester at der er én aktiv ordre op ArrayListen

@@ -15,6 +15,10 @@ public class MenuItem {
         this.setName(name);
     }
 
+    public void displayIngredients(){
+
+    }
+
     //Getter- og setter-metoderne sikrer indkapsling
     public int getItemNumber() {
         return itemNumber;
