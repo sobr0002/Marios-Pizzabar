@@ -12,17 +12,17 @@ public class ActiveOrdersTest {
 
     @BeforeEach
     void setup(){
-        OrderType order1 = new OrderType(); //Opretter ordrer ved at sætte værdierne
-        OrderType order2 = new OrderType();
+        OrderType order1 = new OrderType(1); //Opretter ordrer ved at sætte værdierne
+        OrderType order2 = new OrderType(2);
         ActiveOrders.getActiveOrderList().clear(); //Sletter indhold i ArrayList før hver test
 
     }
 
     @Test
     void testAddOrder() {
-        PhoneOrder order01 = new PhoneOrder("Order01", "15:30"); //Opretter en testordre
+        PhoneOrder order01 = new PhoneOrder(1, "Order01", "15:30"); //Opretter en testordre
         ActiveOrders.addOrder(order01); //Tilføjer testordren til "ActiveOrderList"
-        PhoneOrder order02 = new PhoneOrder("Order02", "12:30");
+        PhoneOrder order02 = new PhoneOrder(2, "Order02", "12:30");
         ActiveOrders.addOrder(order02);
 
 
@@ -33,9 +33,9 @@ public class ActiveOrdersTest {
 
     @Test
     void testRemoveOrder() {
-        PhoneOrder order01 = new PhoneOrder("Order01", "15:30"); //Opretter en testordre
+        PhoneOrder order01 = new PhoneOrder(1, "Order01", "15:30"); //Opretter en testordre
         ActiveOrders.addOrder(order01); //Tilføjer testordren til "ActiveOrderList"
-        PhoneOrder order02 = new PhoneOrder("Order02", "12:30");
+        PhoneOrder order02 = new PhoneOrder(2, "Order02", "12:30");
         ActiveOrders.addOrder(order02);
 
 

@@ -8,7 +8,7 @@ public class Menu {
     public Menu(){
         menuItems = new ArrayList<>();
         createPizzas();
-        createDrinks();
+        //createDrinks();
     }
 
     //Metode der tilføjer et menuItem til listen

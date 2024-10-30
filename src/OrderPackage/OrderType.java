@@ -6,16 +6,16 @@ import java.util.ArrayList;
 
 public class OrderType {
 
-    private static int ID = 0;
-    private static Time time = new Time(); //Instantierer time-objektet
+    private int ID;
+    private Time time = new Time(); //Instantierer time-objektet
     private ArrayList<MenuItem> order = new ArrayList<>();
     protected boolean isPhoneOrder;
 
 
     //CONSTRUCTOR
-    public OrderType() {
+    public OrderType(int ID) {
         this.isPhoneOrder = false;
-        ID++;
+        this.ID = ID;
         time.orderTime();
     }
 

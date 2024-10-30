@@ -16,8 +16,8 @@ public class OrderHistoryTest {
     
     @Test
     void testAddOrder() {
-        DeskOrder order01 = new DeskOrder("Lange", LocalTime.now()); //Instantierer testordre af "DeskOrder"-klassen
-        DeskOrder order02 = new DeskOrder("Hæst", LocalTime.now());
+        DeskOrder order01 = new DeskOrder(1, "Lange", LocalTime.now()); //Instantierer testordre af "DeskOrder"-klassen
+        DeskOrder order02 = new DeskOrder(2, "Hæst", LocalTime.now());
         
         OrderHistory.addOrder(order01);
         assertTrue(OrderHistory.getOrderHistoryList().contains(order01)); //Tester om ordrer tilføjes korrekt til ArrayListen "OrderHistoryList"

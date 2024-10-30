@@ -9,8 +9,8 @@ public class PhoneOrder extends OrderType {
 
 
     // Constructor
-    public PhoneOrder(String customer, String pickupTime) {
-        super(); // Kalder  constructor af superclass (OrderPackage.OrderType)
+    public PhoneOrder(int ID, String customer, String pickupTime) {
+        super(ID); // Kalder  constructor af superclass (OrderPackage.OrderType)
         this.pickupTime = LocalTime.parse(pickupTime); //Parse omdanner ml. datatyper, så String bliver til time
         this.customer = customer;
         isPhoneOrder = true;

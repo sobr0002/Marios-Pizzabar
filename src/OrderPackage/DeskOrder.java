@@ -9,8 +9,8 @@ public class DeskOrder extends OrderType{
     private LocalTime timeToFinish;
 
     // Constructor with timeToFinish parameter
-    public DeskOrder(String customer, LocalTime timeToFinish) {
-        super();
+    public DeskOrder(int ID, String customer, LocalTime timeToFinish) {
+        super(ID);
         isPhoneOrder = false;
         this.customer = customer;
         this.timeToFinish = LocalTime.now().plusMinutes(15);
