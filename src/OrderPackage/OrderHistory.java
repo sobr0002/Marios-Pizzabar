@@ -12,7 +12,6 @@ public class OrderHistory {
         orderHistoryList.add(order);
     }
 
-
     public static void displayOrderHistory() {
         if (orderHistoryList.isEmpty()) {
             System.out.println("Der forefindes ingen ordrehistorik.");

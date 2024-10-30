@@ -8,7 +8,7 @@ public class DeskOrder extends OrderType{
     private String customer;
     private LocalTime timeToFinish;
 
-    // Constructor with timeToFinish parameter
+    // Constructor with timeToFinish parameter.
     public DeskOrder(int ID, String customer, LocalTime timeToFinish) {
         super(ID);
         isPhoneOrder = false;
@@ -28,7 +28,6 @@ public class DeskOrder extends OrderType{
     }
 
     //Getter og Setter for timeToFinish
-
     public LocalTime getTimeToFinish() {
         return timeToFinish;
     }

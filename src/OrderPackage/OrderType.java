@@ -11,7 +11,6 @@ public class OrderType {
     private ArrayList<MenuItem> order = new ArrayList<>();
     protected boolean isPhoneOrder;
 
-
     //CONSTRUCTOR
     public OrderType(int ID) {
         this.isPhoneOrder = false;

@@ -7,10 +7,6 @@ public class Interface {
     Menu menu = new Menu();
     private int ID = 1;
 
-    public Interface(){
-
-    }
-
     public void interfaceStart(){
         System.out.println("""
         Valg 1 - Opret ordre

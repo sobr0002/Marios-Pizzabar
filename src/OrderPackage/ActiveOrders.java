@@ -32,6 +32,7 @@ public class ActiveOrders {
     public static void displayActiveOrders(){
         Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden
 
+
         System.out.println("De aktive ordrer er her: ");
         for(OrderType order: activeOrderList){ //laver itererer gennem og printer elementerne ud
             order.displayOrder();

@@ -7,7 +7,6 @@ public class PhoneOrder extends OrderType {
     private LocalTime pickupTime;
     private String customer;
 
-
     // Constructor
     public PhoneOrder(int ID, String customer, String pickupTime) {
         super(ID); // Kalder  constructor af superclass (OrderPackage.OrderType)
