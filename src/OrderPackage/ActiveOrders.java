@@ -34,7 +34,7 @@ public class ActiveOrders {
 
 
         System.out.println("De aktive ordrer er her: ");
-        for(OrderType order: activeOrderList){ //laver itererer gennem og printer elementerne ud
+        for(OrderType order: activeOrderList){ //itererer gennem "activeOrderList" og printer elementerne ud
             order.displayOrder();
             System.out.println("");
         }
