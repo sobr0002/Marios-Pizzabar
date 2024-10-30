@@ -26,7 +26,7 @@ public class Interface {
                         System.out.println("Skriv kundes navn: ");
                         DeskOrder deskOrder = new DeskOrder(ID++, UserInput.inputStr(), LocalTime.now()); //Opretter deskOrder
 
-                        userAddItem(deskOrder); //Kalder metode der der gør at varer kan. tilføjes til ordre.
+                        userAddItem(deskOrder); //Kalder metode der der gør at varer kan tilføjes til ordre.
 
                         ActiveOrders.addOrder(deskOrder); //Tilføjer ordre til activeOrderList
                         break;
@@ -41,7 +41,7 @@ public class Interface {
                         PhoneOrder phoneOrder = new PhoneOrder(ID++,name, pickupTime); //Opretter phoneOrder
 
 
-                        userAddItem(phoneOrder); //Kalder metode der der gør at varer kan. tilføjes til ordre.
+                        userAddItem(phoneOrder); //Kalder metode der der gør at varer kan tilføjes til ordre.
 
                         ActiveOrders.addOrder(phoneOrder); //Tilføjer ordre til activeOrderList
                         break;

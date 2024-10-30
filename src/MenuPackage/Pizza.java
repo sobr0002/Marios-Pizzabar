@@ -4,13 +4,13 @@ import java.util.ArrayList;
 
 public class Pizza extends MenuItem{
 
-    private ArrayList<String> ingredients;
+    private ArrayList<String> ingredients = new ArrayList<>();
 
     public Pizza(int itemNumber, float price, String name, int... ingredientsIndex){
         super(itemNumber, price, name);
 
-        //Tildeler ingredients et tomt ArrayListe
-        ingredients = new ArrayList<>();
+        //Tildeler ingredients en tom ArrayListe
+        //ingredients = new ArrayList<>();
 
         for(int index : ingredientsIndex){
             if (index >= 0 && index < Ingredients.ingredientsList.length){
