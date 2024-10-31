@@ -14,10 +14,10 @@ public class OrderHistory {
 
     public static void displayOrderHistory() {
         if (orderHistoryList.isEmpty()) {
-            System.out.println("Der forefindes ingen ordrehistorik.");
+            System.out.println("Ingen ordrehistorik.");
         }  else {
-            System.out.println("Ordre Historik");
-            System.out.println("");
+            System.out.println("Ordrehistorik");
+            System.out.println(" ");
             for (OrderType order : orderHistoryList) {
                 order.displayOrder();
                 System.out.println(" "); //Printer tom linje, så hver ordre kommer på ny linje

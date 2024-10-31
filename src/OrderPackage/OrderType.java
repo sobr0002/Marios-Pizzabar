@@ -51,7 +51,7 @@ public class OrderType {
     //Metode der printer en ordrer ud.
     public void displayOrder(){
         if (isPhoneOrder){
-            System.out.println("Telefon Ordre " + ID);
+            System.out.println("Telefonbestilling " + ID);
         } else {
             System.out.println("Ordrenr.: " + ID + "\n");
         }

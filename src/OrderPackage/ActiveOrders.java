@@ -33,7 +33,7 @@ public class ActiveOrders {
         Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden
 
 
-        System.out.println("De aktive ordrer er her: ");
+        System.out.println("Bestillingsliste: ");
         for(OrderType order: activeOrderList){ //itererer gennem "activeOrderList" og printer elementerne ud
             order.displayOrder();
             System.out.println("");

@@ -19,8 +19,8 @@ public class Interface {
 
         switch (UserInput.inputInt()){
             case 1:
-                System.out.println("valg 1 - Desk Ordre");
-                System.out.println("Valg 2 - Telefon Ordre");
+                System.out.println("Valg 1 - Bestilling i butik");
+                System.out.println("Valg 2 - Telefonisk bestilling");
                 switch (UserInput.inputInt()){
                     case 1:
                         System.out.println("Skriv kundes navn: ");
@@ -32,10 +32,10 @@ public class Interface {
                         break;
 
                     case 2:
-                        System.out.println("Skriv kundes navn: ");
+                        System.out.println("Indtast kundenavn");
                         String name = UserInput.inputStr();
 
-                        System.out.println("Skriv afhentings tid. (HH:mm)");
+                        System.out.println("Indtast afhentningstid: (HH:mm)");
                         String pickupTime = UserInput.inputStr();
 
                         PhoneOrder phoneOrder = new PhoneOrder(ID++,name, pickupTime); //Opretter phoneOrder
@@ -49,7 +49,7 @@ public class Interface {
                 break;
 
             case 2:
-                System.out.println("Vælg en ordre du vil redigere:");
+                System.out.println("Hvilken ordre skal redigeres?");
                 ActiveOrders.displayActiveOrders();
                 int input = UserInput.inputInt();
 
@@ -57,10 +57,11 @@ public class Interface {
                     if (input == order.getID()) {
 
                         System.out.println("""
-                                    1: Vil du annullere ordre?
-                                    2: Vil du tilføje vare til ordren?
-                                    3: Vil du slette en vare fra ordren?
-                                    4: Fjern en ordre der færdig""");
+                                    Hvordan ønsker du at fortsætte?
+                                    1: Annuller ordre
+                                    2: Tilføj vare til ordre
+                                    3: Slet vare fra ordre
+                                    4: Fjern færdigbehandlet ordre fra bestillingsliste""");
 
                         switch (UserInput.inputInt()) {
                             case 1:
@@ -93,7 +94,7 @@ public class Interface {
                 break;
 
             default:
-                System.out.println("Valg ikke mulig");
+                System.out.println("Ugyldigt valg");
                 break;
         }
     }
@@ -101,14 +102,14 @@ public class Interface {
     public void userAddItem(OrderType order){
         Menu.displayMenu();
         while (true){
-            System.out.println("Vælg varer der skal tilføjes til ordren");
+            System.out.println("Vælg vare, der skal tilføjes til ordren");
             int input = UserInput.inputInt();
             if(input >= 0 && input <= menu.getMenuList().size()){
                 MenuItem item = menu.getMenuList().get(input-1);
                 order.addItem(item);
-                System.out.println(item.getName() + " tilføjet.");
+                System.out.println(item.getName() + " tilføjet");
             } else {
-                System.out.println("valg ikke mulig");
+                System.out.println("Ugyldigt valg");
             }
             System.out.println("Tilføj en ny vare?");
             String inputStr = UserInput.inputStr();
@@ -129,7 +130,7 @@ public class Interface {
             MenuItem item = menu.getMenuList().get(input-1);
             return item;
         } else {
-            System.out.println("valg ikke mulig");
+            System.out.println("Ugyldigt valg");
         }
         return null;
     }

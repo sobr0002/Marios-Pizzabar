@@ -14,7 +14,7 @@ public class DeskOrder extends OrderType{
         isPhoneOrder = false;
         this.customer = customer;
         this.timeToFinish = LocalTime.now().plusMinutes(15);
-        //this.timeToFinish = (timeToFinish != null) ? timeToFinish : LocalTime.now().plusMinutes(15);
+        //This timeToFinish = (timeToFinish != null) ? timeToFinish : LocalTime.now().plusMinutes(15);
         //En terniary, der sætter tiden til nu og derefter plusser 15 min. til, så afhentningstidspunktet
         // altid bliver 15 min fra nu
     }
