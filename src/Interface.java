@@ -2,6 +2,8 @@ import MenuPackage.*;
 import OrderPackage.*;
 
 import java.time.LocalTime;
+import java.util.Iterator;
+import java.util.Scanner;
 
 public class Interface {
     Menu menu = new Menu();
@@ -14,6 +16,7 @@ public class Interface {
         Valg 3 - Se bestillingsliste
         Valg 4 - Se ordrehistorik
         Valg 5 - Se menukort
+        Valg 6 - Luk programmet
         """);
 
 
@@ -53,8 +56,12 @@ public class Interface {
                 ActiveOrders.displayActiveOrders();
                 int input = UserInput.inputInt();
 
-                for (OrderType order : ActiveOrders.getActiveOrderList()) {
+                Iterator<OrderType> iterator = ActiveOrders.getActiveOrderList().iterator();
+                while (iterator.hasNext()){
+                    OrderType order = iterator.next();
                     if (input == order.getID()) {
+                        System.out.println("input: " + input);
+                        System.out.println("ordre id: " + order.getID());
 
                         System.out.println("""
                                     Hvordan ønsker du at fortsætte?
@@ -62,10 +69,13 @@ public class Interface {
                                     2: Tilføj vare til ordre
                                     3: Slet vare fra ordre
                                     4: Fjern færdigbehandlet ordre fra bestillingsliste""");
+                        Scanner sc = new Scanner(System.in);
+                        int newInput = sc.nextInt();
+                        System.out.println("order id: " + order.getID());
 
-                        switch (UserInput.inputInt()) {
+                        switch (newInput) {
                             case 1:
-                                ActiveOrders.removeOrder(order);
+                                iterator.remove();
                                 break;
                             case 2:
                                 order.addItem(retrieveItem());
@@ -74,8 +84,11 @@ public class Interface {
                                 order.removeItem(retrieveItem());
                                 break;
                             case 4:
+                                iterator.remove();
                                 ActiveOrders.finishOrder(order);
                                 break;
+                            default:
+                                System.out.println("Valg ikke mulig");
                         }
                     }
                 }
@@ -91,6 +104,10 @@ public class Interface {
 
             case 5:
                 Menu.displayMenu(); //Viser menukort
+                break;
+
+            case 6:
+                System.exit(0);
                 break;
 
             default:

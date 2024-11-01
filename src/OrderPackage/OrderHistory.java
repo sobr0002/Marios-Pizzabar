@@ -22,7 +22,19 @@ public class OrderHistory {
                 order.displayOrder();
                 System.out.println(" "); //Printer tom linje, så hver ordre kommer på ny linje
             }
+            System.out.println(" ");
+            System.out.println("Omsætning: " + totalRevenue());
+            System.out.println(" ");
         }
+
+    }
+
+    public static float totalRevenue(){
+        float revenue = 0;
+        for (OrderType order : orderHistoryList){
+            revenue += order.getTotalPrice();
+        }
+        return revenue;
     }
 
     public static ArrayList<OrderType> getOrderHistoryList(){

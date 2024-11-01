@@ -10,6 +10,7 @@ public class OrderType {
     private Time time = new Time(); //Instantierer time-objektet
     private ArrayList<MenuItem> order = new ArrayList<>();
     protected boolean isPhoneOrder;
+    float totalPrice = 0;
 
     //CONSTRUCTOR
     public OrderType(int ID) {
@@ -23,29 +24,26 @@ public class OrderType {
     }
 
     public void removeItem(MenuItem item) { //Sletter én vare fra aktuel ordre
-
         if (order.contains(item)) {
             order.remove(item);
         } else {
             System.out.println("Varen findes ikke.");
         }
-
     }
 
     //GETTER-METODE FOR AT INDHENTE BESTILLINGSTIDSPUNKT
     public LocalTime getOrderTime() {
         return time.getTime(); //kalder metoden fra OrderPackage.Time-klassen til at angive det aktuelle tidspunkt
+    }
 
-    } //GETTER-METODE FOR AT INDHENTE ID
-
+    //GETTER-METODE FOR AT INDHENTE ID
     public int getID() {
         return ID;
+    }
 
-    } //UDSKRIVE ORDER TIME OG ID VIA TOSTRING
-
-    @Override
-    public String toString() {
-        return "Order OrderPackage.Time: " + time.getTime() + ", ID nr: " + ID;
+    //Getter-metode for at indhente total pris
+    public float getTotalPrice() {
+        return totalPrice;
     }
 
     //Metode der printer en ordrer ud.
@@ -56,14 +54,21 @@ public class OrderType {
             System.out.println("Ordrenr.: " + ID + "\n");
         }
 
-        float totalPrice = 0; //Ny variabel til at holde styr på total pris af ordre
         if (order.isEmpty()){ // Tjekker at arrayListe er tom
             System.out.println("Ordren er tom");
         } else {
-            for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
-                System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
-                totalPrice += item.getPrice();
+            float price = 0;
+            if(totalPrice == price){
+                for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
+                    System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
+                    totalPrice += item.getPrice();
+                }
+            } else {
+                for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
+                    System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
+                }
             }
+            price = totalPrice;
 
             System.out.println();
             System.out.println(time.toString()); //Printer bestillingstidspunkt.

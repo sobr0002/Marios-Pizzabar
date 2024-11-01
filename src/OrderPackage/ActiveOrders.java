@@ -25,18 +25,20 @@ public class ActiveOrders {
     
     //Metode der fjerner ordre fra aktive liste og tilføjer til ordre history liste
     public static void finishOrder(OrderType order){
-        removeOrder(order);
         OrderHistory.addOrder(order);
     }
 
     public static void displayActiveOrders(){
-        Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden
+        if(activeOrderList.isEmpty()){
+            System.out.println("Bestillingsliste er tom");
+        } else {
+            Sort.sortActiveOrders(activeOrderList); //her har vi sorteret dem med sortMetoden
 
-
-        System.out.println("Bestillingsliste: ");
-        for(OrderType order: activeOrderList){ //itererer gennem "activeOrderList" og printer elementerne ud
-            order.displayOrder();
-            System.out.println("");
+            System.out.println("Bestillingsliste: ");
+            for(OrderType order: activeOrderList){ //itererer gennem "activeOrderList" og printer elementerne ud
+                order.displayOrder();
+                System.out.println(" ");
+            }
         }
     }
 
