@@ -20,6 +20,7 @@ public class DeskOrder extends OrderType{
     }
 
     //getter og setter for customer
+    @Override
     public String getCustomer() {
         return customer;
     }
@@ -42,5 +43,4 @@ public class DeskOrder extends OrderType{
         String temp = timeToFinish.format(dtf);
         return LocalTime.parse(temp);
     }
-
 }

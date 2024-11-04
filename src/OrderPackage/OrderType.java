@@ -10,7 +10,7 @@ public class OrderType {
     private Time time = new Time(); //Instantierer time-objektet
     private ArrayList<MenuItem> order = new ArrayList<>();
     protected boolean isPhoneOrder;
-    float totalPrice = 0;
+    float totalPrice;
 
     //CONSTRUCTOR
     public OrderType(int ID) {
@@ -51,24 +51,18 @@ public class OrderType {
         if (isPhoneOrder){
             System.out.println("Telefonbestilling " + ID);
         } else {
-            System.out.println("Ordrenr.: " + ID + "\n");
+            System.out.println("Ordrenr.: " + ID);
         }
+        System.out.println("Kunde: " + getCustomer() + "\n");
 
         if (order.isEmpty()){ // Tjekker at arrayListe er tom
             System.out.println("Ordren er tom");
         } else {
-            float price = 0;
-            if(totalPrice == price){
-                for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
-                    System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
-                    totalPrice += item.getPrice();
-                }
-            } else {
-                for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
-                    System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
-                }
+            totalPrice = 0;
+            for (MenuItem item : order){ //For-loop der tjekker aller items if arrayliste order.
+                System.out.println(item.getName() + " " + item.getPrice() + " kr."); //printer navn og pris på vare.
+                totalPrice += item.getPrice();
             }
-            price = totalPrice;
 
             System.out.println();
             System.out.println(time.toString()); //Printer bestillingstidspunkt.
@@ -90,5 +84,8 @@ public class OrderType {
         return order;
     }
 
+    public String getCustomer(){
+        return "Kundenavn ikke tilgængelig";
+    }
 }
 

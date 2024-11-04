@@ -22,9 +22,8 @@ public class Menu {
             System.out.println("Menuen er tom");
         } else {
             for (MenuItem item : menuItems) {
-                System.out.println(item.getItemNumber() + ". " + item.getName() + " " + item.getPrice() + "kr. ");
-                item.displayIngredients();
-                System.out.println("");
+                System.out.println(item.getItemNumber() + ". " + item.getName() + " " + item.getPrice() + "kr. " + item.getIngredients());
+                //item.displayIngredients();
                 System.out.println("");
             }
         }

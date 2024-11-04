@@ -22,11 +22,6 @@ public class Pizza extends MenuItem{
     }
 
     @Override
-    public void displayIngredients(){
-        System.out.print(ingredients);
-    }
-    
-    
     public ArrayList<String> getIngredients(){
         return ingredients;
     }

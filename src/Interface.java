@@ -60,20 +60,14 @@ public class Interface {
                 while (iterator.hasNext()){
                     OrderType order = iterator.next();
                     if (input == order.getID()) {
-                        System.out.println("input: " + input);
-                        System.out.println("ordre id: " + order.getID());
-
                         System.out.println("""
                                     Hvordan ønsker du at fortsætte?
                                     1: Annuller ordre
                                     2: Tilføj vare til ordre
                                     3: Slet vare fra ordre
                                     4: Fjern færdigbehandlet ordre fra bestillingsliste""");
-                        Scanner sc = new Scanner(System.in);
-                        int newInput = sc.nextInt();
-                        System.out.println("order id: " + order.getID());
 
-                        switch (newInput) {
+                        switch (UserInput.inputInt()) {
                             case 1:
                                 iterator.remove();
                                 break;
@@ -88,7 +82,7 @@ public class Interface {
                                 ActiveOrders.finishOrder(order);
                                 break;
                             default:
-                                System.out.println("Valg ikke mulig");
+                                System.out.println("Ugyldigt valg");
                         }
                     }
                 }

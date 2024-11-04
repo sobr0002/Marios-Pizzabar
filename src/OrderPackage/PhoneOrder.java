@@ -22,6 +22,7 @@ public class PhoneOrder extends OrderType {
     }
 
     //GETTER og SETTER
+    @Override
     public String getCustomer() {
         return customer;
     }

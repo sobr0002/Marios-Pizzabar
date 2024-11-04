@@ -1,5 +1,7 @@
 package MenuPackage;
 
+import java.util.ArrayList;
+
 public class MenuItem {
 
     private int itemNumber;
@@ -15,8 +17,8 @@ public class MenuItem {
         this.setName(name);
     }
 
-    public void displayIngredients(){
-
+    public ArrayList<String> getIngredients(){
+        return null;
     }
 
     //Getter- og setter-metoderne sikrer indkapsling
