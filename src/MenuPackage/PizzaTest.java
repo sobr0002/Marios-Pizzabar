@@ -29,13 +29,13 @@ public class PizzaTest {
     @Test
     public void testPizzaWithValidIngredientsIndices() {
         // Tester at alle ingredienser er korrekte
-        Pizza pizza = new Pizza(2, 12.99f, "Veggie Special", 0, 1, 3); // Cheese, Tomato, Mushroom
-        ArrayList<String> ingredients = pizza.getIngredients();
+        Pizza skinkepizza = new Pizza(2, 67, "Skinkepizza", 1, 2, 3);
+        ArrayList<String> ingredients1 = skinkepizza.getIngredients();
 
-        assertEquals(3, ingredients.size());
-        assertTrue(ingredients.contains("Cheese"));
-        assertTrue(ingredients.contains("Tomato"));
-        assertTrue(ingredients.contains("Mushroom"));
+        assertEquals(3, ingredients1.size());
+        assertTrue(ingredients1.contains("Ost"));
+        assertTrue(ingredients1.contains("Tomatsauce"));
+        assertTrue(ingredients1.contains("Skinke"));
     }
 
     @Test

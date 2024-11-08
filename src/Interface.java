@@ -65,7 +65,7 @@ public class Interface {
                                     1: Annuller ordre
                                     2: Tilføj vare til ordre
                                     3: Slet vare fra ordre
-                                    4: Fjern færdigbehandlet ordre fra bestillingsliste""");
+                                    4: Afslut ordre""");
 
                         switch (UserInput.inputInt()) {
                             case 1:
@@ -110,6 +110,7 @@ public class Interface {
         }
     }
 
+    //Metode der hjælper med at tilføje varer til ordrer
     public void userAddItem(OrderType order){
         Menu.displayMenu();
         while (true){
@@ -124,7 +125,7 @@ public class Interface {
             }
             System.out.println("Tilføj en ny vare?");
             String inputStr = UserInput.inputStr();
-            if (inputStr.equalsIgnoreCase("nej")){
+            if (inputStr.equalsIgnoreCase("nej") || inputStr.equalsIgnoreCase("no")){
                 break;
             } else {
                 continue;
@@ -132,12 +133,13 @@ public class Interface {
         }
     }
 
+    //Metode der returnerer en MenuItem efter brugerens ønske
     public MenuItem retrieveItem(){
         Menu.displayMenu();
         System.out.println(" ");
         System.out.println("Vælg en vare");
         int input = UserInput.inputInt();
-        if(input >= 0 && input <= menu.getMenuList().size()){
+        if(input >= 0 && input <= menu.getMenuList().size()){ //Tjekker at input er indefor index.
             MenuItem item = menu.getMenuList().get(input-1);
             return item;
         } else {

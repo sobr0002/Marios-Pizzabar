@@ -9,14 +9,12 @@ public class Pizza extends MenuItem{
     public Pizza(int itemNumber, float price, String name, int... ingredientsIndex){
         super(itemNumber, price, name);
 
-        //Tildeler ingredients en tom ArrayListe
-        //ingredients = new ArrayList<>();
-
         for(int index : ingredientsIndex){
             if (index >= 0 && index < Ingredients.ingredientsList.length){
                 ingredients.add(Ingredients.ingredientsList[index]);
             }
         }
+
         //Hver gang Pizza-klassen instantieres, tilføjes objektet til "menuItems" fra "Menu"-klassen
         Menu.addMenuItem(this);
     }
